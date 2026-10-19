@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://limpieza-prosol.com.ar/sitemap.xml
