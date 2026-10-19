@@ -102,6 +102,34 @@
     footer { background:#111; color: rgba(255,255,255,0.55); padding:2rem 5vw; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
     .footer-legal { font-size:0.75rem; }
     @media (max-width:768px) { .nav-links { display:none; } }
+
+    /* MENÚ EN CELULAR Y WHATSAPP FLOTANTE */
+    .nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; cursor: pointer; color: var(--negro); align-items: center; justify-content: center; }
+    .nav-links a { white-space: nowrap; }
+    @media (max-width: 980px) {
+      .nav-toggle { display: flex; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--crema); border-bottom: 1px solid var(--crema-dark); padding: 0.5rem 5vw 1.25rem; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+      nav.abierto .nav-links { display: flex; }
+      .nav-links li a { display: block; padding: 0.9rem 0; font-size: 0.9rem; }
+      .nav-links .nav-cta { text-align: center; margin-top: 0.5rem; padding: 13px 20px; }
+    }
+    .wa-flotante { position: fixed; right: 18px; bottom: 18px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.28); transition: transform 0.15s; }
+    .wa-flotante:hover { transform: scale(1.06); }
+    @media (max-width: 768px) { footer { padding-bottom: 96px; } }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.8rem; }
+    .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .footer-links a:hover { color: var(--blanco); text-decoration: underline; }
+    .otros { padding: 3rem 5vw; background: var(--crema-dark); }
+    .otros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; max-width: 920px; }
+    .otro-servicio { display: flex; justify-content: space-between; align-items: center; background: var(--blanco); padding: 1.25rem 1.5rem; border-radius: 4px; text-decoration: none; color: var(--negro); font-weight: 600; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.15s; }
+    .otro-servicio:hover { transform: translateY(-2px); color: var(--naranja-texto); }
+    .foto-servicio { margin: 2rem 0 0.5rem; }
+    .foto-servicio img { width: 100%; max-width: 920px; height: auto; display: block; border-radius: 4px; box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .foto-servicio figcaption { font-size: 0.82rem; color: var(--gris); margin-top: 0.6rem; font-style: italic; }
+    ol.pasos { list-style: none; counter-reset: paso; margin-top: 1.5rem; display: grid; gap: 1rem; }
+    ol.pasos li { counter-increment: paso; position: relative; padding-left: 3rem; font-size: 0.95rem; color: var(--gris); line-height: 1.7; }
+    ol.pasos li strong { color: var(--negro); }
+    ol.pasos li::before { content: counter(paso); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: var(--naranja-hover); color: var(--blanco); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -110,10 +138,12 @@
   <a href="/" class="nav-logo">
     <img src="/images/logo-nav.png" alt="Prosol" width="200" height="40" />
   </a>
+  <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <ul class="nav-links">
     <li><a href="/#porque">Por qué Prosol</a></li>
     <li><a href="/#servicios">Servicios</a></li>
     <li><a href="/#zona">Cobertura</a></li>
+    <li><a href="/trabaja-con-nosotros/">Trabajá con nosotros</a></li>
     <li><a href="/#contacto" class="nav-cta">Presupuesto</a></li>
   </ul>
 </nav>
@@ -131,7 +161,7 @@
 <section class="content">
   <h2 class="h2">Limpieza de oficinas con abono mensual en Tucumán</h2>
   <p class="body-text">Una oficina limpia no es un detalle menor: es parte de la imagen que tu empresa transmite a clientes, proveedores y al propio equipo de trabajo. En Prosol nos especializamos en el mantenimiento regular de oficinas en San Miguel de Tucumán, con una frecuencia adaptada a tu operación diaria.</p>
-  <p class="body-text">La mayoría de nuestros clientes de oficina trabajan con un <strong>abono mensual</strong>: definimos juntos los días y horarios que menos interfieren con la actividad, y garantizamos continuidad — si alguien de nuestro equipo falta, lo reemplazamos, así el servicio nunca se corta.</p>
+  <p class="body-text">La mayoría de nuestros clientes de oficina trabajan con un <strong>abono mensual</strong>: definimos juntos los días y horarios que menos interfieren con la actividad, y garantizamos continuidad: si alguien de nuestro equipo falta, lo reemplazamos, así el servicio nunca se corta.</p>
   <ul class="check-list">
     <li>Limpieza de escritorios, pisos, baños y espacios comunes</li>
     <li>Vaciado de cestos y reposición de insumos básicos</li>
@@ -139,13 +169,15 @@
     <li>Coordinación de horarios fuera del horario de atención, si lo preferís</li>
     <li>Personal registrado, con seguro de accidentes de trabajo</li>
   </ul>
+  <figure class="foto-servicio"><img src="/images/carousel-1.jpg" width="1000" height="546" loading="lazy" alt="Oficina limpia y ordenada en Tucumán mantenida por Prosol" /><figcaption>Oficina mantenida por Prosol en San Miguel de Tucumán.</figcaption></figure>
 </section>
 
 <section class="content alt">
   <div class="content-inner">
     <h2 class="h2">Por qué una oficina limpia importa más de lo que parece</h2>
     <p class="body-text">Un espacio de trabajo prolijo influye directamente en cómo un cliente percibe la seriedad de tu empresa desde el primer segundo que entra. También impacta en el bienestar del equipo: menos polvo, superficies desinfectadas y baños en condiciones son parte de un ambiente de trabajo saludable.</p>
-    <p class="body-text">Trabajamos con oficinas de distintos tamaños en Tucumán — desde un espacio compartido de pocos escritorios hasta oficinas con varias salas de reunión — adaptando el equipo y el tiempo de trabajo a cada caso.</p>
+    <p class="body-text">Además, una empresa de limpieza formal te evita problemas: facturamos correctamente, así que podés deducir el servicio, y nuestro personal tiene seguro de accidentes de trabajo, por lo que no asumís ninguna responsabilidad si algo pasa dentro de tu oficina.</p>
+    <p class="body-text">Trabajamos con oficinas de distintos tamaños en Tucumán, desde un espacio compartido de pocos escritorios hasta oficinas con varias salas de reunión, adaptando el equipo y el tiempo de trabajo a cada caso.</p>
   </div>
 </section>
 
@@ -166,17 +198,47 @@
     </div>
 </section>
 
+<section class="content">
+  <h2 class="h2">Cómo trabajamos</h2>
+  <ol class="pasos">
+    <li><strong>Nos contás qué necesitás.</strong> Por WhatsApp, de lunes a viernes de 9 a 18 hs.</li>
+    <li><strong>Te pasamos el presupuesto.</strong> Sin cargo ni compromiso, y respondemos el mismo día.</li>
+    <li><strong>Acordamos días y horarios.</strong> Los que menos interfieren con tu actividad.</li>
+    <li><strong>Empezamos.</strong> Con personal registrado y asegurado. Si alguien falta, lo reemplazamos.</li>
+  </ol>
+</section>
+
+<section class="otros">
+  <h2 class="h2">Otros servicios de Prosol en Tucumán</h2>
+  <div class="otros-grid"><a class="otro-servicio" href="/limpieza-de-locales-y-galerias-tucuman/"><span>Locales y galerías comerciales</span><span aria-hidden="true">→</span></a><a class="otro-servicio" href="/limpieza-final-de-obra-tucuman/"><span>Limpieza final de obra</span><span aria-hidden="true">→</span></a></div>
+</section>
+
 <div class="cta-band">
   <h2>¿Hablamos de tu proyecto?</h2>
   <p>Respondemos el mismo día. Presupuesto sin cargo ni compromiso.</p>
-  <a href="https://wa.me/5493815009744" class="btn-whatsapp" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.522 5.851L.054 23.25a.75.75 0 00.916.919l5.451-1.456A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.656-.516-5.176-1.414l-.368-.217-3.812 1.02 1.036-3.773-.232-.376A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Escribinos por WhatsApp</a>
+  <a href="https://wa.me/5493815009744?text=Hola%20Prosol%2C%20quisiera%20consultar%20por%20limpieza%20de%20oficinas" class="btn-whatsapp" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.522 5.851L.054 23.25a.75.75 0 00.916.919l5.451-1.456A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.656-.516-5.176-1.414l-.368-.217-3.812 1.02 1.036-3.773-.232-.376A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Escribinos por WhatsApp</a>
 </div>
 
 
 <footer>
   <img src="/images/logo-footer.png" alt="Prosol" style="height:32px;width:auto;opacity:0.6;" width="32" height="32" />
   <span class="footer-legal"><em>En todos los detalles.</em> · San Miguel de Tucumán · limpieza-prosol.com.ar</span>
+  <div class="footer-links"><a href="/limpieza-de-oficinas-tucuman/">Limpieza de oficinas</a><a href="/limpieza-de-locales-y-galerias-tucuman/">Locales y galerías comerciales</a><a href="/limpieza-final-de-obra-tucuman/">Limpieza final de obra</a><a href="/trabaja-con-nosotros/">Trabajá con nosotros</a><a href="https://www.instagram.com/prosol.limpieza/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61591692447696" target="_blank" rel="noopener">Facebook</a></div>
 </footer>
 
+<a class="wa-flotante" href="https://wa.me/5493815009744?text=Hola%20Prosol%2C%20quisiera%20consultar%20por%20limpieza%20de%20oficinas" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.522 5.851L.054 23.25a.75.75 0 00.916.919l5.451-1.456A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.656-.516-5.176-1.414l-.368-.217-3.812 1.02 1.036-3.773-.232-.376A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+<script>
+(function () {
+  var nav = document.querySelector('nav'), btn = document.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  btn.addEventListener('click', function () {
+    var abierto = nav.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded', abierto);
+  });
+  nav.querySelectorAll('.nav-links a').forEach(function (a) {
+    a.addEventListener('click', function () { nav.classList.remove('abierto'); btn.setAttribute('aria-expanded', false); });
+  });
+})();
+</script>
 </body>
 </html>

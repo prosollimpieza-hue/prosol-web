@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prosol – Limpieza de Oficinas, Final de Obra y Mantenimiento en Tucumán</title>
-  <meta name="description" content="Prosol: limpieza de oficinas en Tucumán, limpieza final de obra y mantenimiento de locales. Empresa formal con más de 25 años de experiencia. Presupuesto sin cargo." />
-  <meta name="keywords" content="limpieza de oficinas tucuman, limpieza final de obra tucuman, mantenimiento de consorcios y edificios, abono mensual limpieza empresas, empresa de limpieza industrial tucuman, limpieza de casas tucuman, Prosol" />
+  <title>Empresa de Limpieza en Tucumán | Prosol, más de 25 años</title>
+  <meta name="description" content="Empresa de limpieza en Tucumán con más de 25 años: oficinas, locales, galerías y final de obra. Personal registrado y con seguro. Presupuesto sin cargo por WhatsApp." />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://limpieza-prosol.com.ar/" />
 
   <!-- Open Graph (WhatsApp, Facebook, etc.) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Prosol – Limpieza de Oficinas y Final de Obra en Tucumán" />
+  <meta property="og:title" content="Prosol | Empresa de limpieza en Tucumán" />
   <meta property="og:description" content="Empresa de limpieza para locales, galerías, oficinas y depósitos en Tucumán. Más de 25 años de trayectoria. Personal registrado y continuidad garantizada." />
   <meta property="og:url" content="https://limpieza-prosol.com.ar/" />
   <meta property="og:locale" content="es_AR" />
@@ -32,9 +31,17 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Prosol – Empresa Integral de Limpieza y Mantenimiento",
+    "name": "Prosol",
+    "alternateName": "Prosol, Empresa Integral de Limpieza y Mantenimiento",
+    "legalName": "Pronto SRL",
     "description": "Empresa de limpieza en Tucumán. Especialistas en limpieza de oficinas, limpieza final de obra y mantenimiento de locales y galerías. Más de 25 años de trayectoria en el Gran Tucumán.",
-    "url": "https://limpieza-prosol.com.ar",
+    "url": "https://limpieza-prosol.com.ar/",
+    "logo": "https://limpieza-prosol.com.ar/images/logo-nav.png",
+    "image": "https://limpieza-prosol.com.ar/og-image.jpg",
+    "sameAs": [
+      "https://www.instagram.com/prosol.limpieza/",
+      "https://www.facebook.com/profile.php?id=61591692447696"
+    ],
     "telephone": "+543815009744",
     "email": "prosol.limpieza@gmail.com",
     "address": {
@@ -43,7 +50,7 @@
       "addressRegion": "Tucumán",
       "addressCountry": "AR"
     },
-    "areaServed": ["San Miguel de Tucumán", "Yerba Buena", "Tafí Viejo", "Las Talitas"],
+    "areaServed": ["San Miguel de Tucumán", "Yerba Buena", "Tafí Viejo", "Las Talitas", "Banda del Río Salí"],
     "openingHours": "Mo-Fr 09:00-18:00",
     "foundingDate": "1999",
     "priceRange": "$$",
@@ -115,7 +122,7 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Prosol – Empresa de limpieza en Tucumán",
+    "name": "Prosol | Empresa de limpieza en Tucumán",
     "description": "Video de presentación de Prosol, empresa de limpieza de oficinas, locales, galerías y final de obra con más de 25 años de trayectoria en San Miguel de Tucumán y el Gran Tucumán.",
     "thumbnailUrl": "https://i.ytimg.com/vi/MJfaD6r6R04/hqdefault.jpg",
     "uploadDate": "2026-09-07",
@@ -140,6 +147,7 @@
       --naranja:       #D4571C;
       --naranja-hover: #b8461a;
       --naranja-texto: #a03d17;
+      --naranja-claro: #E8854A; /* texto chico sobre fondo oscuro */
       --bordo:         #8B1A2B;
       --verde:         #4A5E3A;
       --crema:         #F5EFE6;
@@ -197,8 +205,9 @@
       max-width: 680px;
     }
     .hero-eyebrow {
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--naranja-texto); margin-bottom: 1rem;
+      display: block; font-family: 'Inter', sans-serif;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; line-height: 1.6;
+      text-transform: uppercase; color: var(--naranja-claro); margin-bottom: 1rem;
     }
     .hero-title {
       font-family: 'Playfair Display', serif;
@@ -223,7 +232,13 @@
       letter-spacing: 0.04em; text-decoration: none; border-radius: 2px;
       transition: background 0.2s, transform 0.15s;
     }
-    .btn-primary:hover { background: var(--naranja-hover); transform: translateY(-1px); }
+    .btn-primary:hover { background: var(--bordo); transform: translateY(-1px); }
+    .btn-secundario {
+      display: inline-block; border: 1px solid rgba(255,255,255,0.45); color: var(--blanco);
+      padding: 13px 28px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+      text-decoration: none; border-radius: 2px; transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secundario:hover { border-color: var(--blanco); background: rgba(255,255,255,0.08); }
     .hero-stat {
       display: inline-block;
       border-top: 1px solid rgba(255,255,255,0.2);
@@ -259,8 +274,9 @@
       font-weight: 700; line-height: 1.15; margin-bottom: 1rem;
     }
     .section-title-light { color: var(--blanco); }
+    .section-eyebrow-claro { color: var(--naranja-claro); }
     .section-subtitle {
-      font-size: 1rem; color: rgba(255,255,255,0.5);
+      font-size: 1rem; color: rgba(255,255,255,0.65);
       max-width: 520px; margin-bottom: 3rem; line-height: 1.8;
     }
     .diferencial-grid {
@@ -282,7 +298,7 @@
       font-family: 'Playfair Display', serif; font-size: 1.05rem;
       font-weight: 700; color: var(--blanco); margin-bottom: 0.5rem;
     }
-    .diferencial-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+    .diferencial-desc { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
 
     /* SERVICIOS */
     #servicios { padding: 6rem 5vw; background: var(--crema); }
@@ -313,6 +329,25 @@
       font-weight: 700; color: var(--negro); margin-bottom: 0.75rem;
     }
     .servicio-desc { font-size: 0.88rem; color: var(--gris); line-height: 1.7; }
+    .servicio-link {
+      display: inline-block; margin-top: 1rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--naranja-texto); text-decoration: none;
+    }
+    .servicio-link:hover { text-decoration: underline; }
+
+    /* ANTES Y DESPUÉS */
+    #trabajos { padding: 5rem 5vw; background: var(--blanco); }
+    .ad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+    .ad-par { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .ad-par figure { position: relative; }
+    .ad-par img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 4px; }
+    .ad-par figcaption {
+      position: absolute; left: 8px; top: 8px; background: rgba(28,28,28,0.8); color: var(--blanco);
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px;
+    }
+    .ad-par figure:last-child figcaption { background: var(--naranja-hover); }
+    .ad-titulo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; margin-top: 0.85rem; }
 
     /* ZONA */
     #zona {
@@ -347,7 +382,7 @@
     }
     .contacto-item-label {
       font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--naranja); margin-bottom: 2px;
+      text-transform: uppercase; color: var(--naranja-texto); margin-bottom: 2px;
     }
     .contacto-item-value { font-size: 0.95rem; color: var(--negro); font-weight: 500; }
     .contacto-item-value a { color: var(--negro); text-decoration: none; }
@@ -361,7 +396,7 @@
       font-weight: 700; margin-bottom: 0.75rem; line-height: 1.25;
     }
     .cta-box-desc {
-      font-size: 0.88rem; color: rgba(255,255,255,0.5);
+      font-size: 0.88rem; color: rgba(255,255,255,0.7);
       margin-bottom: 1.75rem; line-height: 1.7;
     }
     .btn-whatsapp {
@@ -384,14 +419,38 @@
     .footer-logo { height: 32px; width: auto; opacity: 0.6; }
     .footer-legal { font-size: 0.75rem; }
 
+    .carrusel-marco { height: 500px; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; max-width: 900px; }
+
     @media (max-width: 768px) {
       .contacto-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .carrusel-marco { height: auto; aspect-ratio: 4 / 3; }
+      .carrusel-izq { left: 8px !important; }
+      .carrusel-der { right: 8px !important; }
     }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
     }
-  </style>
+  
+    /* MENÚ EN CELULAR Y WHATSAPP FLOTANTE */
+    .nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; cursor: pointer; color: var(--negro); align-items: center; justify-content: center; }
+    .nav-links a { white-space: nowrap; }
+    @media (max-width: 980px) {
+      .nav-toggle { display: flex; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--crema); border-bottom: 1px solid var(--crema-dark); padding: 0.5rem 5vw 1.25rem; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+      nav.abierto .nav-links { display: flex; }
+      .nav-links li a { display: block; padding: 0.9rem 0; font-size: 0.9rem; }
+      .nav-links .nav-cta { text-align: center; margin-top: 0.5rem; padding: 13px 20px; }
+    }
+    .wa-flotante { position: fixed; right: 18px; bottom: 18px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.28); transition: transform 0.15s; }
+    .wa-flotante:hover { transform: scale(1.06); }
+    @media (max-width: 768px) { footer { padding-bottom: 96px; } }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.8rem; }
+    .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .footer-links a:hover { color: var(--blanco); text-decoration: underline; }
+</style>
 </head>
 <body>
 
@@ -399,6 +458,7 @@
   <a href="#hero" class="nav-logo">
     <img style="object-fit:cover;object-position:center top;" src="/images/logo-nav.png" alt="Prosol logo" width="200" height="40" />
   </a>
+  <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <ul class="nav-links">
     <li><a href="#porque">Por qué Prosol</a></li>
     <li><a href="#servicios">Servicios</a></li>
@@ -412,11 +472,12 @@
 <section id="hero">
   <div class="hero-bg" role="img" aria-label="Equipo de Prosol trabajando en limpieza industrial en Tucumán"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Empresa de limpieza en Tucumán · Más de 25 años</p>
-    <h1 class="hero-title">Limpieza que cuida<br><em>cada detalle</em></h1>
+    <h1 class="hero-title"><span class="hero-eyebrow">Empresa de limpieza en Tucumán · Más de 25 años</span>Limpieza que cuida<br><em>cada detalle</em></h1>
+    <p class="hero-desc">Limpieza de oficinas, locales, galerías comerciales y final de obra en San Miguel de Tucumán y todo el Gran Tucumán. Personal registrado, con seguro, y presupuesto sin cargo.</p>
 
     <div class="hero-actions">
       <a href="https://wa.me/5493815009744?text=Hola%20Prosol%2C%20quisiera%20consultar%20por%20un%20presupuesto" class="btn-primary" target="_blank" rel="noopener">Pedí tu presupuesto</a>
+      <a href="#servicios" class="btn-secundario">Ver servicios</a>
     </div>
     <div class="hero-stat">
       <div class="stat-num">25+</div>
@@ -429,9 +490,9 @@
 
 <!-- POR QUÉ PROSOL -->
 <section id="porque">
-  <p class="section-eyebrow">Por qué elegirnos</p>
+  <p class="section-eyebrow section-eyebrow-claro">Por qué elegirnos</p>
   <h2 class="section-title section-title-light">Lo que nos diferencia</h2>
-  <p class="section-subtitle">Contratar una empresa registrada no es un gasto extra es la diferencia entre un servicio que funciona y uno que te deja colgado.</p>
+  <p class="section-subtitle">Contratar una empresa registrada no es un gasto extra: es la diferencia entre un servicio que funciona y uno que te deja colgado.</p>
   <div class="diferencial-grid">
     <div class="diferencial-card">
       <div class="diferencial-icon">🛡️</div>
@@ -464,29 +525,55 @@
     <div class="servicio-card">
       <div class="servicio-numero" aria-hidden="true">01</div>
       <div class="servicio-nombre"><a href="/limpieza-de-locales-y-galerias-tucuman/" style="color:inherit;text-decoration:none;">Limpieza de locales y galerías comerciales</a></div>
-      <p class="servicio-desc">Mantenimiento regular de locales y galerías. Planificamos frecuencia y horarios para que el servicio no interfiera con tu operación.</p>
+      <p class="servicio-desc">Mantenimiento regular de locales, galerías y áreas comunes. Atendemos varios locales del mismo edificio con un solo contacto y en horarios que no interfieren con la atención al público.</p>
+      <a class="servicio-link" href="/limpieza-de-locales-y-galerias-tucuman/">Ver el servicio →</a>
     </div>
     <div class="servicio-card">
       <div class="servicio-numero" aria-hidden="true">02</div>
       <div class="servicio-nombre"><a href="/limpieza-de-oficinas-tucuman/" style="color:inherit;text-decoration:none;">Limpieza de oficinas en Tucumán</a></div>
-      <p class="servicio-desc">Limpieza integral de oficinas y consultorios en Tucumán. Abono mensual con frecuencia a medida. La discreción y el cuidado que tu entorno de trabajo necesita.</p>
+      <p class="servicio-desc">Limpieza integral de oficinas y consultorios en Tucumán. Abono mensual con frecuencia a medida, antes o después de tu horario de trabajo y sin permanencia mínima.</p>
+      <a class="servicio-link" href="/limpieza-de-oficinas-tucuman/">Ver el servicio →</a>
     </div>
     <div class="servicio-card">
       <div class="servicio-numero" aria-hidden="true">03</div>
       <div class="servicio-nombre"><a href="/limpieza-final-de-obra-tucuman/" style="color:inherit;text-decoration:none;">Limpieza final de obra en Tucumán</a></div>
-      <p class="servicio-desc">Limpieza profunda post-construcción o refacción. Dejamos el espacio listo para inaugurar.</p>
+      <p class="servicio-desc">Limpieza profunda después de una construcción o refacción: polvo de obra, restos de adhesivos, vidrios y sanitarios. Dejamos el espacio listo para inaugurar o entregar.</p>
+      <a class="servicio-link" href="/limpieza-final-de-obra-tucuman/">Ver el servicio →</a>
     </div>
   </div>
 </section>
 
+<!-- ANTES Y DESPUÉS -->
+<section id="trabajos">
+  <p class="section-eyebrow">Trabajos reales</p>
+  <h2 class="section-title section-title-dark">Así lo recibimos, así lo entregamos</h2>
+  <div class="ad-grid">
+    <div>
+      <div class="ad-par">
+        <figure><img src="/images/trabajos/cocina-antes.jpg" width="900" height="676" loading="lazy" alt="Bacha de cocina con restos de comida antes de la limpieza de Prosol en Tucumán" /><figcaption>Antes</figcaption></figure>
+        <figure><img src="/images/trabajos/cocina-despues.jpg" width="900" height="676" loading="lazy" alt="La misma cocina limpia después del trabajo de Prosol" /><figcaption>Después</figcaption></figure>
+      </div>
+      <p class="ad-titulo">Cocina</p>
+    </div>
+    <div>
+      <div class="ad-par">
+        <figure><img src="/images/trabajos/bano-antes.jpg" width="900" height="556" loading="lazy" alt="Lavatorio con sarro y manchas antes de la limpieza" /><figcaption>Antes</figcaption></figure>
+        <figure><img src="/images/trabajos/bano-despues.jpg" width="900" height="556" loading="lazy" alt="Lavatorio de mármol limpio y sin sarro después de la limpieza de Prosol" /><figcaption>Después</figcaption></figure>
+      </div>
+      <p class="ad-titulo">Baño</p>
+    </div>
+  </div>
+  <p style="font-size:0.85rem;color:var(--gris);margin-top:2rem;">Más trabajos en nuestro Instagram <a href="https://www.instagram.com/prosol.limpieza/" target="_blank" rel="noopener" style="color:var(--naranja-texto);font-weight:600;">@prosol.limpieza</a>.</p>
+</section>
+
 <!-- VIDEO PRESENTACIÓN -->
 <section id="video-presentacion" style="padding:5rem 5vw;background:#F5EFE6;">
-  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#D4571C;margin-bottom:0.75rem;">Conocé Prosol</p>
+  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#a03d17;margin-bottom:0.75rem;">Conocé Prosol</p>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#1C1C1C;margin-bottom:2rem;">Más de 25 años en todos los detalles</h2>
   <div style="position:relative;max-width:800px;margin:0 auto;aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
     <iframe
       src="https://www.youtube-nocookie.com/embed/MJfaD6r6R04"
-      title="Prosol – Empresa de limpieza en Tucumán"
+      title="Prosol | Empresa de limpieza en Tucumán"
       style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
       loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -502,12 +589,12 @@
 
 <!-- GALERÍA CARRUSEL -->
 <section id="galeria" style="padding:5rem 5vw;background:#EDE3D5;">
-  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#D4571C;margin-bottom:0.75rem;">Nuestro trabajo</p>
+  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#a03d17;margin-bottom:0.75rem;">Nuestro trabajo</p>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#1C1C1C;margin-bottom:2rem;">Espacios que mantenemos</h2>
 
   <div style="position:relative;max-width:900px;margin:0 auto;">
     <!-- Slides container -->
-    <div style="position:relative;height:500px;border-radius:6px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+    <div class="carrusel-marco" style="position:relative;border-radius:6px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
       <div class="prosol-slide" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:1;transition:opacity 0.6s ease;">
       <img src="/images/carousel-1.jpg" width="1000" height="700" alt="Oficina limpia y ordenada en Tucumán mantenida por Prosol" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
     </div><div class="prosol-slide" style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 0.6s ease;">
@@ -520,7 +607,7 @@
     </div>
 
     <!-- Flecha izquierda -->
-    <button onclick="prosolPrev()" aria-label="Anterior"
+    <button onclick="prosolPrev()" aria-label="Anterior" class="carrusel-izq"
       style="position:absolute;left:-22px;top:50%;transform:translateY(-50%);
              background:#1C1C1C;color:white;border:none;border-radius:50%;
              width:44px;height:44px;font-size:1.1rem;cursor:pointer;
@@ -529,7 +616,7 @@
       onmouseover="this.style.background='#D4571C'" onmouseout="this.style.background='#1C1C1C'">&#8592;</button>
 
     <!-- Flecha derecha -->
-    <button onclick="prosolNext()" aria-label="Siguiente"
+    <button onclick="prosolNext()" aria-label="Siguiente" class="carrusel-der"
       style="position:absolute;right:-22px;top:50%;transform:translateY(-50%);
              background:#1C1C1C;color:white;border:none;border-radius:50%;
              width:44px;height:44px;font-size:1.1rem;cursor:pointer;
@@ -539,7 +626,7 @@
 
     <!-- Dots centrados debajo -->
     <div style="display:flex;justify-content:center;align-items:center;margin-top:1.25rem;gap:4px;">
-      <button class="prosol-dot" onclick="prosolGoTo(0)" aria-label="Foto 1" style="width:10px;height:10px;border-radius:50%;background:#D4571C;border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(1)" aria-label="Foto 2" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(2)" aria-label="Foto 3" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(3)" aria-label="Foto 4" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button>
+      <button class="prosol-dot" onclick="prosolGoTo(0)" aria-label="Foto 1" style="width:10px;height:10px;border-radius:50%;background:#D4571C;border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(1)" aria-label="Foto 2" style="width:10px;height:10px;border-radius:50%;background:rgba(28,28,28,0.25);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(2)" aria-label="Foto 3" style="width:10px;height:10px;border-radius:50%;background:rgba(28,28,28,0.25);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button><button class="prosol-dot" onclick="prosolGoTo(3)" aria-label="Foto 4" style="width:10px;height:10px;border-radius:50%;background:rgba(28,28,28,0.25);border:none;cursor:pointer;margin:0 5px;padding:0;transition:background 0.3s;"></button>
     </div>
   </div>
 
@@ -555,7 +642,7 @@
 
   window.prosolGoTo = function(n) {
     slides[idx].style.opacity = '0';
-    dots[idx].style.background = 'rgba(255,255,255,0.5)';
+    dots[idx].style.background = 'rgba(28,28,28,0.25)';
     idx = (n + total) % total;
     slides[idx].style.opacity = '1';
     dots[idx].style.background = '#D4571C';
@@ -621,6 +708,13 @@
             <div class="contacto-item-value"><a href="https://www.facebook.com/profile.php?id=61591692447696" target="_blank" rel="noopener">Limpieza - Prosol</a></div>
           </div>
         </div>
+        <div class="contacto-item">
+          <div class="contacto-item-icon" style="background:#C13584;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="white" stroke="none"/></svg></div>
+          <div>
+            <div class="contacto-item-label">Instagram</div>
+            <div class="contacto-item-value"><a href="https://www.instagram.com/prosol.limpieza/" target="_blank" rel="noopener">@prosol.limpieza</a></div>
+          </div>
+        </div>
         
       </div>
     </div>
@@ -639,9 +733,9 @@
 
 <!-- FAQ para SEO -->
 <section id="faq" style="padding:4rem 5vw;background:#fff;">
-  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#D4571C;margin-bottom:0.75rem;">Preguntas frecuentes</p>
+  <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#a03d17;margin-bottom:0.75rem;">Preguntas frecuentes</p>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#1C1C1C;margin-bottom:2.5rem;">Lo que nos preguntan</h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 3rem;max-width:900px;">
+  <div class="faq-grid">
     <div style="border-bottom:1px solid #EDE3D5;padding-bottom:1.5rem;">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1C1C1C;margin-bottom:0.5rem;">¿Hacen limpieza de final de obra en Tucumán?</h3>
       <p style="font-size:0.88rem;color:#5A5A5A;line-height:1.75;">Sí. Nos especializamos en limpieza post-construcción y refacción en San Miguel de Tucumán y el Gran Tucumán. Dejamos el espacio listo para inaugurar, con el equipo adecuado para cada tipo de superficie.</p>
@@ -662,7 +756,7 @@
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1C1C1C;margin-bottom:0.5rem;">¿Cómo pido un presupuesto?</h3>
       <p style="font-size:0.88rem;color:#5A5A5A;line-height:1.75;">Por WhatsApp al 381 500-9744 de lunes a viernes de 9 a 18 hs. Respondemos el mismo día y el presupuesto es sin cargo ni compromiso.</p>
     </div>
-    <div style="padding-bottom:1.5rem;">
+    <div style="border-bottom:1px solid #EDE3D5;padding-bottom:1.5rem;">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1C1C1C;margin-bottom:0.5rem;">¿Atienden galerías comerciales con varios locales?</h3>
       <p style="font-size:0.88rem;color:#5A5A5A;line-height:1.75;">Sí, es uno de nuestros servicios más frecuentes. Podemos atender varios locales dentro de una misma galería, coordinando horarios para no interferir con la actividad comercial.</p>
     </div>
@@ -675,8 +769,23 @@
 
 <footer>
   <img style="height:44px;width:44px;object-fit:cover;object-position:50% 8%;" src="/images/logo-footer.png" alt="Prosol" class="footer-logo" />
-  <span class="footer-legal"><em>En todos los detalles.</em> · San Miguel de Tucumán · limpieza-prosol.com.ar · <a href="/trabaja-con-nosotros/" style="color:inherit;">Trabajá con nosotros</a></span>
+  <span class="footer-legal"><em>En todos los detalles.</em> · San Miguel de Tucumán · limpieza-prosol.com.ar</span>
+  <div class="footer-links"><a href="/limpieza-de-oficinas-tucuman/">Limpieza de oficinas</a><a href="/limpieza-de-locales-y-galerias-tucuman/">Locales y galerías comerciales</a><a href="/limpieza-final-de-obra-tucuman/">Limpieza final de obra</a><a href="/trabaja-con-nosotros/">Trabajá con nosotros</a><a href="https://www.instagram.com/prosol.limpieza/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61591692447696" target="_blank" rel="noopener">Facebook</a></div>
 </footer>
 
+<a class="wa-flotante" href="https://wa.me/5493815009744?text=Hola%20Prosol%2C%20quisiera%20consultar%20por%20un%20presupuesto" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.522 5.851L.054 23.25a.75.75 0 00.916.919l5.451-1.456A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.656-.516-5.176-1.414l-.368-.217-3.812 1.02 1.036-3.773-.232-.376A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+<script>
+(function () {
+  var nav = document.querySelector('nav'), btn = document.querySelector('.nav-toggle');
+  if (!nav || !btn) return;
+  btn.addEventListener('click', function () {
+    var abierto = nav.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded', abierto);
+  });
+  nav.querySelectorAll('.nav-links a').forEach(function (a) {
+    a.addEventListener('click', function () { nav.classList.remove('abierto'); btn.setAttribute('aria-expanded', false); });
+  });
+})();
+</script>
 </body>
 </html>
