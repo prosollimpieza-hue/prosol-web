@@ -16,8 +16,23 @@ sitio/
   404.html                                    página de error
   images/                                     fotos y logos (images/trabajos/ = fotos reales de trabajos)
   sitemap.xml, robots.txt, og-image.jpg, favicon.png
+  tips/                                       tips de limpieza (GENERADOS, no editar a mano)
 netlify.toml                                  configuración de Netlify (carpeta publicada, cabeceras)
+herramientas/tips.json                        contenido de los tips (con sus fuentes)
+herramientas/generar_tips.py                  arma sitio/tips/ y el sitemap a partir de tips.json
 ```
+
+## Tips de limpieza
+
+Para sumar o corregir un tip: editar `herramientas/tips.json`, poner la imagen en `sitio/images/tips/<slug>.jpg`
+(640×800) y correr `python herramientas/generar_tips.py`. El menú, el pie y los estilos se copian de la página de
+oficinas: si se cambian ahí, volver a correr el script. Solo consejos verificados, con fuente, y la seguridad primero.
+
+## Google Analytics
+
+Cada página carga Google Analytics (ID `G-…` en el bloque del `<head>`) y registra dos eventos:
+`contacto_whatsapp` (cada toque a un enlace de WhatsApp, con la página y el botón) y `postulacion_enviada`
+(formulario de empleo).
 
 ## Cómo hacer cambios
 
