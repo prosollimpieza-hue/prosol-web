@@ -133,12 +133,12 @@
     ol.pasos li::before { content: counter(paso); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: var(--naranja-hover); color: var(--blanco); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 </style>
   <!-- Google Analytics: visitas y toques a WhatsApp (evento contacto_whatsapp) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6029HVC3LN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-6029HVC3LN');
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
       if (a) gtag('event', 'contacto_whatsapp', { ubicacion: a.className || 'enlace', pagina: location.pathname });
