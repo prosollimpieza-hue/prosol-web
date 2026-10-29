@@ -3,7 +3,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://limpieza-prosol.com.ar/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -48,13 +48,13 @@
   </url>
   <url>
     <loc>https://limpieza-prosol.com.ar/tips/no-mezclar-lavandina-con-vinagre/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://limpieza-prosol.com.ar/tips/cuanta-lavandina-por-litro-de-agua/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
